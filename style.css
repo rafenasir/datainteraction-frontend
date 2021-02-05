@@ -1,0 +1,31 @@
+.title {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.form {
+    margin: auto;
+    max-width: 90%;
+    text-align: center;
+}
+
+.news-title {
+    width: 60%;
+    border-radius: 10px;
+}
+
+.news-body {
+    width: 60%;
+    height: 50vh;
+    border-radius: 10px;
+}
+
+.submit {
+    margin-top: 2vh;
+}
+
+.label {
+    margin-top: 2vh;
+    text-align: left;
+    width: 60%;
+}
