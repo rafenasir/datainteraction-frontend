@@ -32,3 +32,50 @@ function postNews() {
         .then(response => response.json())
         .then(json => console.log(json))
 }
+
+function postAboutUs() {
+    let aboutUsBody = document.getElementById("aboutus").value;
+    console.log("This is detail about us " + aboutUsBody);
+
+    fetch("http://localhost:3000/api/about_us", {
+            method: "POST",
+            body: JSON.stringify({
+                body: aboutUsBody,
+
+            }),
+            headers: {
+                "Content-Type": "application/json; charset=UTF-8",
+                "accept": "application/json"
+            }
+
+        })
+        .then(response => response.json())
+        .then(json => console.log(json))
+}
+
+function postContactUs() {
+    let contactUsPhone = document.getElementById("contact-phone").value;
+    console.log("This is detail phone " + contactUsPhone);
+    let contactUsEmail = document.getElementById("contact-email").value;
+    console.log("This is detail phone " + contactUsEmail);
+    let contactUsAddress = document.getElementById("contact-address").value;
+    console.log("This is detail phone " + contactUsAddress);
+
+
+
+    fetch("http://localhost:3000/api/contact_us", {
+            method: "POST",
+            body: JSON.stringify({
+                phone: contactUsPhone,
+                email: contactUsEmail,
+                address: contactUsAddress
+            }),
+            headers: {
+                "Content-Type": "application/json; charset=UTF-8",
+                "accept": "application/json"
+            }
+
+        })
+        .then(response => response.json())
+        .then(json => console.log(json))
+}
