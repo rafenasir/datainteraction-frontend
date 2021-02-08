@@ -21,7 +21,7 @@ async function getNews() {
 function createnewsPage(news) {
     console.log("entered the function")
     console.log(news);
-    for (i = 0; i < 4; i++) {
+    for (i = 0; i < news.length; i++) {
         console.log("entered the loop");
         let newsDiv = "<div id ='news' class ='news col-sm-4 col-bg-4'> <h3 id = " + 'news-title' + i + "></h3> <p id =" + 'news-body' + i + "> </p> <p id =" + 'date-modified' + i + "> </p></div>";
 
