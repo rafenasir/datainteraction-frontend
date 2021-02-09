@@ -31,6 +31,10 @@ function postNews() {
         })
         .then(response => response.json())
         .then(json => console.log(json))
+
+    document.getElementById("newsTitle").value = "Enter the News Title";
+    document.getElementById("newsBody").value = "Enter the News Detail"
+
 }
 
 function postAboutUs() {

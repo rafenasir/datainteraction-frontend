@@ -10,16 +10,16 @@
 </head>
 <main>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-gradient" style="background-color:#0B610B;">
             <div class="container-fluid">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
-                <a class="navbar-brand" href="cms.html">CMS</a>
+                <a class="navbar-brand" href="./cms.html">CMS</a>
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" href="./cms.html">News</a>
+                            <a class="nav-link active" aria-current="page" href="#news">News</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="./aboutus.html">About US</a>
@@ -29,10 +29,6 @@
                         </li>
 
                     </ul>
-                    <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
                 </div>
             </div>
         </nav>
@@ -47,15 +43,15 @@
         <div class="form">
             <label class="label" for="contact-phone">Add a Phone Number</label>
             </br>
-            <input type="number" id="contact-phone" class="contactNumber" placeholder="Phone Number">
+            <input type="number" id="contact-phone" class="input-contact" placeholder="Phone Number">
             </br>
             <label class="label" for="contact-email">Add Email Address</label>
             </br>
-            <input type="text" id="contact-email" class="contactEmail" placeholder="Enter your Email">
+            <input type="text" id="contact-email" class="input-contact" placeholder="Enter your Email">
             </br>
             <label class="label" for="contact-address">Address of the Business</label>
             </br>
-            <input type="text" id="contact-address" class="contactAddress" placeholder="Enter Your Address">
+            <input type="text" id="contact-address" class="input-contact address" placeholder="Enter Your Address">
             </br>
 
             <input type="submit" class="btn btn-primary submit" value="Submit" onclick="postContactUs()">
