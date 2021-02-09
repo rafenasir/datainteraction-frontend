@@ -10,37 +10,56 @@
 async function getNews() {
     let data = await fetch('http://localhost:3000/api/news')
     let news = await data.json();
-    console.log(news);
+    // console.log(news);
     createnewsPage(news);
     return news
 
 }
 
-
+let newsID = [];
 
 function createnewsPage(news) {
-    console.log("entered the function")
+    // console.log("entered the function")
     console.log(news);
     for (i = 0; i < news.length; i++) {
-        console.log("entered the loop");
-        let newsDiv = "<div id ='news' class ='news col-sm-4 col-bg-4'> <h3 id = " + 'news-title' + i + "></h3> <p id =" + 'news-body' + i + "> </p> <p id =" + 'date-modified' + i + "> </p></div>";
+        // console.log("entered the loop");
+        let newsDiv = "<div id =" + news[i].id + " class ='news col-sm-4 col-bg-4'> <h3 id = " + 'news-title' + i + "></h3> <p id =" + 'news-body' + i + "> </p> <p id =" + 'date-modified' + i + "> </p></div>";
 
-        console.log("DEFINED VARIABLE")
+        // console.log("DEFINED VARIABLE")
         let container = document.getElementById("news-all");
         container.insertAdjacentHTML("beforeend", newsDiv);
         document.getElementById("news-title" + i).innerHTML = news[i].title;
         document.getElementById("news-body" + i).innerHTML = news[i].body;
         document.getElementById("date-modified" + i).innerHTML = news[i].modified;
+        document.getElementById(news[i].id).addEventListener("click", displaySingleNews);
+        newsID.push(news[i].id);
 
-
-        console.log(i);
+        // console.log(i);
     }
 }
+
+async function displaySingleNews(event) {
+    let target = event.target;
+    let divID = target.parentNode.id;
+
+    console.log(divID);
+
+    let data = await fetch("http://localhost:3000/api/news/" + divID);
+    let singleNews = await data.json();
+    console.log(singleNews);
+    document.getElementById("indNewsTitle").innerHTML = singleNews.title;
+    document.getElementById("indNewsDetail").innerHTML = singleNews.body;
+    document.getElementById("indNewsDate").innerHTML = singleNews.created;
+
+
+}
+
+
 
 async function getContact() {
     let data = await fetch('http://localhost:3000/api/contact_us')
     let contactDetail = await data.json();
-    console.log(contactDetail);
+    // console.log(contactDetail);
     createContactPage(contactDetail)
     return contactDetail
 
@@ -48,7 +67,7 @@ async function getContact() {
 
 function createContactPage(contactDetail) {
     console.log("entered the function")
-    console.log(contactDetail);
+        // console.log(contactDetail);
     document.getElementById("phone-number").innerHTML = contactDetail[0].phone;
     document.getElementById("email-address").innerHTML = contactDetail[0].email;
     document.getElementById("address").innerHTML = contactDetail[0].address;
@@ -61,19 +80,23 @@ function createContactPage(contactDetail) {
 async function getAboutUs() {
     let data = await fetch('http://localhost:3000/api/about_us')
     let aboutUs = await data.json();
-    console.log(aboutUs);
+    // console.log(aboutUs);
     createAboutPage(aboutUs)
     return aboutUs
 }
 
 function createAboutPage(aboutUs) {
-    console.log(aboutUs);
+    // console.log(aboutUs);
     document.getElementById("aboutus-body").innerHTML = aboutUs[0].body;
 
 }
+getNews();
 getContact();
-getAboutUs()
+getAboutUs();
 
+// document.addEventListener('DOMContentLoaded', function(event) {
+//     displaySingleNews();
+// })
 
 // let div = document.createElement("div");
 // div.className = "news col-md-4 col-bg-4";
