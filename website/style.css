@@ -1,3 +1,9 @@
 #news {
     border: 1px solid;
 }
+
+.heading {
+    text-align: center;
+    margin-top: 50px;
+    border-top: 5px solid;
+}

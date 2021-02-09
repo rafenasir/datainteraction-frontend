@@ -41,6 +41,7 @@ function createnewsPage(news) {
 async function displaySingleNews(event) {
     let target = event.target;
     let divID = target.parentNode.id;
+    // window.open("./individualnews.html");
 
     console.log(divID);
 
@@ -49,7 +50,7 @@ async function displaySingleNews(event) {
     console.log(singleNews);
     document.getElementById("indNewsTitle").innerHTML = singleNews.title;
     document.getElementById("indNewsDetail").innerHTML = singleNews.body;
-    document.getElementById("indNewsDate").innerHTML = singleNews.created;
+    document.getElementById("indNewsDate").innerHTML = "Date " + singleNews.created;
 
 
 }
