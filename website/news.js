@@ -58,9 +58,21 @@ function createContactPage(contactDetail) {
 
 }
 
+async function getAboutUs() {
+    let data = await fetch('http://localhost:3000/api/about_us')
+    let aboutUs = await data.json();
+    console.log(aboutUs);
+    createAboutPage(aboutUs)
+    return aboutUs
+}
 
+function createAboutPage(aboutUs) {
+    console.log(aboutUs);
+    document.getElementById("aboutus-body").innerHTML = aboutUs[0].body;
 
+}
 getContact();
+getAboutUs()
 
 
 // let div = document.createElement("div");
