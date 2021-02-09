@@ -37,6 +37,32 @@ function createnewsPage(news) {
     }
 }
 
+async function getContact() {
+    let data = await fetch('http://localhost:3000/api/contact_us')
+    let contactDetail = await data.json();
+    console.log(contactDetail);
+    createContactPage(contactDetail)
+    return contactDetail
+
+}
+
+function createContactPage(contactDetail) {
+    console.log("entered the function")
+    console.log(contactDetail);
+    document.getElementById("phone-number").innerHTML = contactDetail[0].phone;
+    document.getElementById("email-address").innerHTML = contactDetail[0].email;
+    document.getElementById("address").innerHTML = contactDetail[0].address;
+
+    console.log(email);
+
+
+}
+
+
+
+getContact();
+
+
 // let div = document.createElement("div");
 // div.className = "news col-md-4 col-bg-4";
 // container.appendChild(div);
@@ -72,8 +98,3 @@ function createnewsPage(news) {
 // document.getElementById("sample").innerHTML = news[0].body;
 // document.getElementById("sample").innerHTML = news[0].body;
 // document.getElementById("sample").innerHTML = news[0].body;
-
-
-
-
-getNews();
