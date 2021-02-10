@@ -1,9 +1,9 @@
 function deleteNews() {
-
+    let individualID = document.getElementById("idOfTheNews").innerHTML;
     fetch("http://localhost:3000/api/news", {
         method: "DELETE",
         body: JSON.stringify({
-            id: "7898686a-72a8-4fb9-8481-c52154cd8f20",
+            id: individualID,
 
         }),
         headers: {
@@ -13,8 +13,4 @@ function deleteNews() {
         }
 
     })
-}
-
-module.export {
-    deleteNews
 }
