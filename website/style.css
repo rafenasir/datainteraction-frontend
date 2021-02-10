@@ -12,3 +12,31 @@
 .idofthenews {
     display: none;
 }
+
+.aboutbody {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.aboutUsTitle {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.contactTitle {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.contactDetail {
+    text-align: center;
+    margin-top: 50px;
+}
+
+table {
+    margin: auto;
+}
+
+td {
+    width: 50%;
+}
