@@ -31,11 +31,13 @@ function postNews() {
         })
         .then(response => response.json())
         .then(json => console.log(json))
-    window.open("../website/news.html", "-blank");
+        // window.open("../website/news.html", "-blank");
     document.getElementById("newsTitle").value = null
     document.getElementById("newsBody").value = null
 
 }
+
+
 
 function postAboutUs() {
     let aboutUsBody = document.getElementById("aboutus").value;

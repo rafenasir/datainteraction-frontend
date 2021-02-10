@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>News CMS</title>
+    <link rel="stylesheet" href="./style.css" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+</head>
+<main>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-gradient" style="background-color:#0B610B;">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+                <a class="navbar-brand" href="../website/news.html">News Website</a>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="./cms.html">News</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./aboutus.html">About US</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact-us.html">Contact US</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <body>
+        <div class="title" id="news">
+            <h1>Edit News</h1>
+            <h3>The Place for the Editing The News</h3>
+
+        </div>
+        <div class="form">
+            <label class="label" for="editNewsTitle">Add News Title</label>
+            </br>
+            <input type="text" id="editNewsTitle" class="news-title" placeholder="Title of the News">
+            </br>
+            <label class="label" for="editNewsBody">Add News Detail</label>
+            </br>
+            <input type="text" id="editNewsBody" class="news-body" placeholder="Detail of the News">
+            </br>
+
+            <input type="submit" class="btn btn-primary submit" value="Submit" onclick="putNews()" href="./news.html">
+
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+        <script src="./editNews.js"></script>
+    </body>
+    <footer>
+
+    </footer>
+</main>
+
+
+</html>
