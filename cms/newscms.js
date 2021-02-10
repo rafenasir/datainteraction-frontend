@@ -31,9 +31,9 @@ function postNews() {
         })
         .then(response => response.json())
         .then(json => console.log(json))
-    window.open("../website/news.html");
-    document.getElementById("newsTitle").value = "Enter the News Title";
-    document.getElementById("newsBody").value = "Enter the News Detail"
+    window.open("../website/news.html", "-blank");
+    document.getElementById("newsTitle").value = null
+    document.getElementById("newsBody").value = null
 
 }
 
