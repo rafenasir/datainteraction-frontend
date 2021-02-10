@@ -48,9 +48,9 @@ async function displaySingleNews(event) {
 
 }
 
-function newpage() {
-    window.open("./aboutus.html", _blank);
-}
+// function newpage() {
+//     window.open("./aboutus.html", _blank);
+// }
 
 // async function editSingleNews(divID) {
 //     let newsButton = "<button id=" + divID + " class='btn btn-success edit' onclick=''>Edit</input> <input id=" + divID + " class='btn btn-danger delete'>Delete</input>";
