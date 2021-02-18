@@ -9,13 +9,13 @@ function runtheNews() {
 }
 
 
-function postNews() {
+async function postNews() {
     let titleNews = document.getElementById("newsTitle").value;
     let detailNews = document.getElementById("newsBody").value;
     console.log("Title of the News is " + titleNews);
     console.log("Detai of the News Is " + detailNews);
 
-    fetch("http://localhost:3000/api/news", {
+    await fetch("http://localhost:3000/api/news", {
             method: "POST",
             body: JSON.stringify({
                 title: titleNews,
